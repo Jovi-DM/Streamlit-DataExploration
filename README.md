@@ -2,7 +2,22 @@
 
 # 📃️ Data exploration
 
-A simple app to check data from your CSV files in just a few clicks!
+<h2 align="left">Search-in-GoogleShop.py</h2>
+
+First you can acess search-in-googleshop.py, change line "Your API Key" (can be find in here 'https://serpapi.com/manage-api-key')
+
+After got it the API_KEY, the program is feeded by txt file, with part-numbers like the ids.txt
+
+<p  align="center">
+    <img alt="Image3" src="https://user-images.githubusercontent.com/30627485/197415571-e35a041f-5a6f-46fe-b29e-5ac310919cec.png"/>
+
+After ran it, gonna be created some csv files, with the name of element per row in the txt.
+
+<p  align="center">
+    <img alt="Image4" src="https://user-images.githubusercontent.com/30627485/197415649-19df2997-b659-47a2-a94a-a03e98a8f29d.png"/>
+
+
+<h2 align="left">So a simple app to check data from your CSV files in just a few clicks!</h2>
 
 -  Can set some filters in side bar
 -  Easy to group rows
