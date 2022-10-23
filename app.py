@@ -15,7 +15,7 @@ st.title("Data Exploration")    # Putting title in page
 
 c1, c2, c3 = st.columns([1, 6, 1])  # Splitting display in 3 columns, but the middle column have 6x more space than 1
 
-with c30:
+with c2:
     uploaded_file = st.file_uploader(   # Button box to select your file csv, that will be imported
         "",
         key="1",
@@ -78,7 +78,7 @@ csv = convert_df(df)    # Convert output for csv, that could be downloaded
 
 c1, c2, c3 = st.columns([2, 1, 1.5])
 
-with c33:
+with c2:
     st.download_button(
         label="Download data as CSV",
         data=csv,
