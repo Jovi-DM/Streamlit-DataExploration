@@ -23,17 +23,17 @@ with c2:
     uploaded_file = st.file_uploader(  # Button box to select your file csv, that will be imported
         "",
         key="1",
-        help="To deactive 'wide mode', access the side bar > Settings > turn off 'wide mode'",
+        help="To deactive 'wide mode', access ☰ > Settings > turn off 'wide mode'",
     )
 
     if uploaded_file is not None:  # Verify if the csv file was uploaded
-        file_container = st.expander("Verify what is in your .csv")
+        file_container = st.expander("Check what is in your .csv")
         shows = pd.read_csv(uploaded_file)
         uploaded_file.seek(0)
         file_container.write(shows)
 
     else:  # Shows for the user where he can upload the file
-        st.markdown("<h1 style='text-align: center; color: white;'> ↑ Do upload of csv file ↑ </h1>",
+        st.markdown("<h1 style='text-align: center; color: white;'> ↑ Upload csv file ↑ </h1>",
                     unsafe_allow_html=True)
 
         st.stop()
@@ -63,7 +63,7 @@ response = AgGrid(
 
 df = pd.DataFrame(response["selected_rows"])
 
-st.markdown("<h1 style='text-align: center; color: white;'> Select rows in table, showed below ↓ </h1>",
+st.markdown("<h1 style='text-align: center; color: white;'> Selected rows in table showed below ↓ </h1>",
             unsafe_allow_html=True)
 
 st.table(df)
