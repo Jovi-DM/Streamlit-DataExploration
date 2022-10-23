@@ -2,9 +2,9 @@
 
 # 📃️ Data exploration
 
-<h2 align="left">Search-in-GoogleShop.py</h2>
+<h2 align="left">Search-in-GoogleShopping.py</h2>
 
-First you can access search-in-googleshop.py, change line "Your API Key" (can be find in here 'https://serpapi.com/manage-api-key')
+First you can access Search-in-GoogleShopping.py, change line "Your API Key" (can be find in here 'https://serpapi.com/manage-api-key')
 
 After got it the API_KEY, the program is feeded by txt file, with part-numbers like the ids.txt
 
