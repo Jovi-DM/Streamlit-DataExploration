@@ -4,6 +4,10 @@ import pandas as pd
 from st_aggrid import AgGrid
 from st_aggrid.grid_options_builder import GridOptionsBuilder
 
+st.set_page_config(  # Start the visualization in wide mode
+    layout="wide",  # Can be "centered" or "wide". In the future also "dashboard", etc.
+)
+
 col1, col2, col3 = st.columns(3)  # Splitting display in 3 columns, to use a central columns centralize the logo
 with col2:
     st.image(
@@ -11,24 +15,24 @@ with col2:
         width=450,
     )
 
-st.title("Data Exploration")    # Putting title in page
+st.title("Data Exploration")  # Putting title in page
 
 c1, c2, c3 = st.columns([1, 6, 1])  # Splitting display in 3 columns, but the middle column have 6x more space than 1
 
 with c2:
-    uploaded_file = st.file_uploader(   # Button box to select your file csv, that will be imported
+    uploaded_file = st.file_uploader(  # Button box to select your file csv, that will be imported
         "",
         key="1",
         help="Para ativar o modo 'wide', acesse o menu lateral > Settings > turn on 'wide mode'",
     )
 
-    if uploaded_file is not None:   # Verify if the csv file was uploaded
+    if uploaded_file is not None:  # Verify if the csv file was uploaded
         file_container = st.expander("Verifique o que foi enviado do seu arquivo .csv")
         shows = pd.read_csv(uploaded_file)
         uploaded_file.seek(0)
         file_container.write(shows)
 
-    else:   # Shows for the user where he can upload the file
+    else:  # Shows for the user where he can upload the file
         st.markdown("<h1 style='text-align: center; color: white;'> ↑ Realize o upload do seu arquivo .csv ↑ </h1>",
                     unsafe_allow_html=True)
 
@@ -74,7 +78,7 @@ def convert_df(df):
     return df.to_csv().encode('utf-8')
 
 
-csv = convert_df(df)    # Convert output for csv, that could be downloaded
+csv = convert_df(df)  # Convert output for csv, that could be downloaded
 
 c1, c2, c3 = st.columns([2, 1, 1.5])
 
