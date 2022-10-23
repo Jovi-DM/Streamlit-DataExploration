@@ -1,38 +1,36 @@
+#   Imports
 import streamlit as st
 import pandas as pd
-import st_aggrid
-
-###################################
 from st_aggrid import AgGrid
 from st_aggrid.grid_options_builder import GridOptionsBuilder
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.columns(3)  # Splitting display in 3 columns, to use a central columns centralize the logo
 with col2:
     st.image(
         "https://i.imgur.com/fAJQjmz.png",
         width=450,
     )
 
-st.title("Data Exploration")
+st.title("Data Exploration")    # Putting title in page
 
-c29, c30, c31 = st.columns([1, 6, 1])
+c1, c2, c3 = st.columns([1, 6, 1])  # Splitting display in 3 columns, but the middle column have 6x more space than 1
 
 with c30:
-
-    uploaded_file = st.file_uploader(
+    uploaded_file = st.file_uploader(   # Button box to select your file csv, that will be imported
         "",
         key="1",
         help="Para ativar o modo 'wide', acesse o menu lateral > Settings > turn on 'wide mode'",
     )
 
-    if uploaded_file is not None:
+    if uploaded_file is not None:   # Verify if the csv file was uploaded
         file_container = st.expander("Verifique o que foi enviado do seu arquivo .csv")
         shows = pd.read_csv(uploaded_file)
         uploaded_file.seek(0)
         file_container.write(shows)
 
-    else:
-        st.markdown("<h1 style='text-align: center; color: white;'> ↑ Realize o upload do seu arquivo .csv ↑ </h1>", unsafe_allow_html=True)
+    else:   # Shows for the user where he can upload the file
+        st.markdown("<h1 style='text-align: center; color: white;'> ↑ Realize o upload do seu arquivo .csv ↑ </h1>",
+                    unsafe_allow_html=True)
 
         st.stop()
 
@@ -61,20 +59,24 @@ response = AgGrid(
 
 df = pd.DataFrame(response["selected_rows"])
 
-st.markdown("<h1 style='text-align: center; color: white;'> Linhas selecionadas na tabela, apareceram abaixo ↓ </h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: white;'> Linhas selecionadas na tabela, apareceram abaixo ↓ </h1>",
+            unsafe_allow_html=True)
 
 st.table(df)
 
-st.markdown("<h1 style='text-align: center; color: white;'> Para exportar os dados filtrados </h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: white;'> Para exportar os dados filtrados </h1>",
+            unsafe_allow_html=True)
+
 
 @st.cache
 def convert_df(df):
     # IMPORTANT: Cache the conversion to prevent computation on every rerun
     return df.to_csv().encode('utf-8')
 
-csv = convert_df(df)
 
-c32, c33, c34 = st.columns([2, 1, 1.5])
+csv = convert_df(df)    # Convert output for csv, that could be downloaded
+
+c1, c2, c3 = st.columns([2, 1, 1.5])
 
 with c33:
     st.download_button(
