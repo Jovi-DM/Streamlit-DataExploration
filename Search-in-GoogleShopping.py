@@ -43,7 +43,7 @@ while (aux < ID_qnt):
     data = json.loads(json_url.read())  # Passing the url with json file to data variable
 
     df = pd.DataFrame(data["shopping_results"])  # Start a dataframe with results in 'shopping_results' tab from json
-    df = df.drop(["product_link", "product_id", "serpapi_product_api", "position", "rating", "thumbnail", "tag"],
+    df = df.drop(["product_link", "product_id", "serpapi_product_api", "position", "thumbnail", "tag"],
                  axis=1)  # Take off some columns
 
     df.to_csv(f'{elements[aux]}.csv')  # Create csv file with the name contented in each line from txt file
