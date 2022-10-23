@@ -23,17 +23,17 @@ with c2:
     uploaded_file = st.file_uploader(  # Button box to select your file csv, that will be imported
         "",
         key="1",
-        help="Para ativar o modo 'wide', acesse o menu lateral > Settings > turn on 'wide mode'",
+        help="To deactive 'wide mode', access the side bar > Settings > turn off 'wide mode'",
     )
 
     if uploaded_file is not None:  # Verify if the csv file was uploaded
-        file_container = st.expander("Verifique o que foi enviado do seu arquivo .csv")
+        file_container = st.expander("Verify what is in your .csv")
         shows = pd.read_csv(uploaded_file)
         uploaded_file.seek(0)
         file_container.write(shows)
 
     else:  # Shows for the user where he can upload the file
-        st.markdown("<h1 style='text-align: center; color: white;'> ↑ Realize o upload do seu arquivo .csv ↑ </h1>",
+        st.markdown("<h1 style='text-align: center; color: white;'> ↑ Do upload of csv file ↑ </h1>",
                     unsafe_allow_html=True)
 
         st.stop()
@@ -48,7 +48,7 @@ gridOptions = gb.build()
 
 st.success(
     f"""
-        💡 Dica! Segure o Shift, enquanto seleciona as linhas para selecionar várias por vez!
+        💡 Tip! Hold the shift, to select more than one row at once!
         """
 )
 
@@ -63,12 +63,12 @@ response = AgGrid(
 
 df = pd.DataFrame(response["selected_rows"])
 
-st.markdown("<h1 style='text-align: center; color: white;'> Linhas selecionadas na tabela, apareceram abaixo ↓ </h1>",
+st.markdown("<h1 style='text-align: center; color: white;'> Select rows in table, showed below ↓ </h1>",
             unsafe_allow_html=True)
 
 st.table(df)
 
-st.markdown("<h1 style='text-align: center; color: white;'> Para exportar os dados filtrados </h1>",
+st.markdown("<h1 style='text-align: center; color: white;'> To export filtered data </h1>",
             unsafe_allow_html=True)
 
 
