@@ -63,6 +63,7 @@ response = AgGrid(
 
 df = pd.DataFrame(response["selected_rows"])
 
+st.info('It is not possible select columns with Rating = "NaN" and others that have values integers to csv download!', icon="ℹ️")
 st.markdown("<h1 style='text-align: center; color: white;'> Selected rows in table showed below ↓ </h1>",
             unsafe_allow_html=True)
 
