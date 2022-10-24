@@ -66,8 +66,7 @@ df = pd.DataFrame(response["selected_rows"])
 st.markdown("<h1 style='text-align: center; color: white;'> Selected rows in table showed below ↓ </h1>",
             unsafe_allow_html=True)
 
-df.fillna("",inplace=True)
-#df = df.style.highlight_null(props="color: transparent;")  # hide NaNs values
+df = df.style.highlight_null(props="color: transparent;")  # hide NaNs
 
 st.table(df)
 
