@@ -29,7 +29,9 @@ After running it, some csv files will be created, with the name of element per r
 
 <h3 align="center">How its work applying filters by columns</h3>
 
-![](https://github.com/Jovi-DM/Streamlit-DataExploration/blob/main/demo/UsingStreamlitData.gif)
+<p align="center">
+  <img src="https://github.com/Jovi-DM/Streamlit-DataExploration/blob/main/demo/UsingStreamlitData.gif" alt="animated" />
+</p>
 
 <h3 align="center">Here you can choose some rows to extract in a csv</h3>
 
