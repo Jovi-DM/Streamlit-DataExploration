@@ -1,4 +1,4 @@
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://jovi-dm-streamlit-dataexplorat-streamlit-dataexploration-z53vdg.streamlitapp.com/)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://jovi-dm-streamlit-dataexplorat-streamlit-dataexploration-uesq1b.streamlitapp.com/)
 
 # 📃️ Data exploration
 
