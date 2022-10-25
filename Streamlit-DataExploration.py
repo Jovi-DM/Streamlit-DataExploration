@@ -3,7 +3,6 @@ import streamlit as st
 import pandas as pd
 from st_aggrid import AgGrid
 from st_aggrid.grid_options_builder import GridOptionsBuilder
-from streamlit_metrics import metric, metric_row
 
 st.set_page_config(  # Start the visualization in wide mode
     layout="wide",  # It can be "centered" or "wide". In the future also "dashboard", etc.
