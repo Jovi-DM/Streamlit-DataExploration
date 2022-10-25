@@ -6,12 +6,12 @@
 
 First you can access Search-in-GoogleShopping.py, change line "Your API Key" (can be find in here 'https://serpapi.com/manage-api-key')
 
-After got it the API_KEY, the program is feeded by txt file, with part-numbers like the ids.txt
+After getting it the API_KEY, the program is feeded by txt file, with part-numbers like the ids.txt
 
 <p  align="center">
     <img alt="Image3" src="https://user-images.githubusercontent.com/30627485/197415571-e35a041f-5a6f-46fe-b29e-5ac310919cec.png"/>
 
-After ran it, gonna be created some csv files, with the name of element per row in the txt.
+After running it, some csv files will be created, with the name of element per row in the txt.
 
 <p  align="center">
     <img alt="Image4" src="https://user-images.githubusercontent.com/30627485/197415649-19df2997-b659-47a2-a94a-a03e98a8f29d.png"/>
@@ -21,7 +21,7 @@ After ran it, gonna be created some csv files, with the name of element per row 
 
 -  Can set some filters in side bar
 -  Easy to group rows
--  After choose that rows that you want can export in csv
+-  When you finish it, choose what rows you want to export
 
 <p  align="center">
     <img alt="MGITECH_logo" height="250" src="https://user-images.githubusercontent.com/30627485/197406241-63870132-0c52-4b28-8182-d689813d74fc.png" width="250"/>
