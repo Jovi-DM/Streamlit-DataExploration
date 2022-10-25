@@ -68,7 +68,7 @@ with c2:
     wch_colour_font = (0, 0, 0)
     fontsize = 48
     iconname = "fa fa-building"
-    sline = "Quantity Stores "
+    sline = "Stores "
     lnk = '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">'
     i = len(num_stores)
 
