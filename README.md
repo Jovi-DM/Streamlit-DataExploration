@@ -25,15 +25,17 @@ After running it, some csv files will be created, with the name of element per r
 
 <p  align="center">
     <img alt="MGITECH_logo" height="250" src="https://user-images.githubusercontent.com/30627485/197406241-63870132-0c52-4b28-8182-d689813d74fc.png" width="250"/>
-<img alt="Image1" src="https://user-images.githubusercontent.com/30627485/197420257-5fefddb4-3fcf-4296-a40f-46bb8a92a78b.png"/>
+<img alt="Image1" src="https://user-images.githubusercontent.com/30627485/197867190-4e3372ca-5d8a-4702-8f95-3fdcbdc7a0ed.png"/>
 
 <h3 align="center">How its work applying filters by columns</h3>
 
-![](https://github.com/Jovi-DM/Streamlit-DataExploration/blob/main/demo/UsingStreamlitData.gif)
+<p align="center">
+  <img src="https://github.com/Jovi-DM/Streamlit-DataExploration/blob/main/demo/UsingStreamlitData.gif" alt="animated" />
+</p>
 
 <h3 align="center">Here you can choose some rows to extract in a csv</h3>
 
-<img alt="Image2" src="https://user-images.githubusercontent.com/30627485/197420292-824a03ce-5033-4a6d-840a-27dd3f399c8f.png"/>
+<img alt="Image2" src="https://user-images.githubusercontent.com/30627485/197867405-d2e98fc3-1036-4f2d-93e7-3e6f5ff1ecdd.png"/>
 
 
 
