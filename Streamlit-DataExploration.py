@@ -5,7 +5,7 @@ from st_aggrid import AgGrid
 from st_aggrid.grid_options_builder import GridOptionsBuilder
 
 st.set_page_config(  # Start the visualization in wide mode
-    layout="wide",  # Can be "centered" or "wide". In the future also "dashboard", etc.
+    layout="wide",  # It can be "centered" or "wide". In the future also "dashboard", etc.
 )
 
 col1, col2, col3 = st.columns(3)  # Splitting display in 3 columns, to use a central columns centralize the logo
@@ -17,7 +17,7 @@ with col2:
 
 st.title("Data Exploration")  # Putting title in page
 
-c1, c2, c3 = st.columns([1, 6, 1])  # Splitting display in 3 columns, but the middle column have 6x more space than 1
+c1, c2, c3 = st.columns([1, 6, 1])  # Splitting display in 3 columns, but The middle column has 6x more space than 1
 
 with c2:
     uploaded_file = st.file_uploader(  # Button box to select your file csv, that will be imported
@@ -32,7 +32,7 @@ with c2:
         uploaded_file.seek(0)
         file_container.write(shows)
 
-    else:  # Shows for the user where he can upload the file
+    else:  # Shows the user where he can upload the file
         st.markdown("<h1 style='text-align: center; color: white;'> ↑ Upload csv file ↑ </h1>",
                     unsafe_allow_html=True)
 
@@ -48,7 +48,7 @@ gridOptions = gb.build()
 
 st.success(
     f"""
-        💡 Tip! Hold the shift, to select more than one row at once!
+        💡 Tip! Hold shift, to select more than one row at once!
         """
 )
 
